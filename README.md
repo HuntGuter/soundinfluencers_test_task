@@ -1,16 +1,88 @@
-# React + Vite
+SoundInfluencers — Frontend Test Task
+Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements two frontend tasks from the SoundInfluencers test assignment:
 
-Currently, two official plugins are available:
+an animated loader component
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+a draggable glass-morphism effect built on top of text content
 
-## React Compiler
+Both components were developed with React and pure CSS based on the provided Figma layouts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Preview
 
-## Expanding the ESLint configuration
+Animated Loader
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Loader Preview](./screenshots/loader.png)
+
+Glass Effect
+
+![Glass Preview](./screenshots/glass.png)
+
+Technologies Used
+
+React 18 — component-based UI architecture
+
+Vite — fast development tooling
+
+CSS — custom animations, layout, styling
+
+CSS Keyframe Animations — for the loader motion
+
+React Hooks (useRef, useEffect) — for DOM interaction and drag logic
+
+Native DOM Events (mousemove, mouseup) — responsive drag behavior
+
+Bounding Client Rect API — precise element positioning
+
+Glassmorphism Techniques — blur, gradients, layering effects
+
+Task Structure
+Part 1 — Animated Loader Component
+
+The first task required recreating an animated loader based on the provided Figma design. The component consists of nine vertical bars with different heights arranged in a centered layout. Each bar animates its opacity with a delayed wave-like sequence. The animation was implemented using pure CSS keyframes, without external libraries. The loader is built as a standalone, reusable React component.
+
+Part 2 — Glassmorphism Overlay Effect
+
+The second task involved creating a draggable glass-style overlay positioned on top of text. The effect uses layered semi-transparent backgrounds, gradients, borders, shadows, and a blur filter to replicate the Figma design. The element is draggable within the container boundaries using React refs and native DOM mouse events. The drag logic ensures smooth interaction, boundary constraints, and no unnecessary re-renders.
+
+How to Run the Project
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+Key Features
+
+Animated loader reproduced precisely from Figma
+
+Pure CSS keyframe animation with staggered timing
+
+Glassmorphism overlay with blur, gradients, and shadows
+
+Draggable glass element with smooth, native interaction
+
+Boundary-restricted movement inside the container
+
+Optimized React implementation using useRef and DOM events
+
+Repository Structure
+src/
+├── App.jsx              # Main application component
+├── loader.css           # Styles for the animated loader
+├── glass.css            # Styles for the glassmorphism effect
+├── glass.jsx            # Draggable glass overlay component
+├── App.css              # Global app styles
+
+Author
+
+Mykyta Olshanskyi
+Frontend Developer
+
+GitHub: https://github.com/HuntGuter
+
+LinkedIn: https://www.linkedin.com/in/huntguter/
